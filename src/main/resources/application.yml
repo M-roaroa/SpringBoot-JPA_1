@@ -17,6 +17,8 @@ spring:
         format-sql: true
 # 스프링 부트 메뉴얼에 있음
 
-logging.level: #띄어쓰기 없음
-  org.hibernate.SQL: debug #띄어쓰기 2칸
+logging:
+  level: #띄어쓰기 없음
+    org.hibernate.SQL: debug #띄어쓰기 2칸
 #  org.hibernate.orm.jdbc.bind: trace # SQL 실행 파라미터를 로그로 남김, 의존성 추가(라이브러리 추가)도 가능
+
