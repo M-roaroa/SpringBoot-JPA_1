@@ -27,7 +27,6 @@ public class Category {
         inverseJoinColumns = @JoinColumn(name = "item_id")) // 아이템 쪽에 들어가는
     private List<Item> items = new ArrayList<>();
 
-
     //NOTE: 셀프로 양방향 연관관계 매핑
     //내 부모가 내 타입
     @ManyToOne(fetch = LAZY)
@@ -36,4 +35,10 @@ public class Category {
 
     @OneToMany(mappedBy = "parent")
     private List<Category> child = new ArrayList<>();
+
+    //==연관관계 메서드==
+    public void addChildCategory(Category child) {
+        this.child.add(child);
+        child.setParent(this);
+    }
 }

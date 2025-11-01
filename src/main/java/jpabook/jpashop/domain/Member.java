@@ -25,5 +25,4 @@ public class Member {
 
     @OneToMany(mappedBy = "member") // Order의 member가 연관관계 주인, 읽기 전용으로 셋팅
     private List<Order> orders = new ArrayList<>();
-
 }
